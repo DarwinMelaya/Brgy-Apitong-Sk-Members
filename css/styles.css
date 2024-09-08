@@ -1,0 +1,233 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(
+    135deg,
+    #f9d423,
+    #ff4e50
+  ); /* Yellow to red gradient */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero Section Styles */
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f9d423, #ff4e50); /* Same gradient */
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Logo styling */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px; /* Increased size */
+  height: 150px; /* Same as width for a circle */
+  border-radius: 50%;
+  object-fit: cover; /* Ensure the image fits within the circle */
+  animation: fadeInDown 1s ease-out, bounce 1s ease-out 1s;
+}
+
+/* Hero content styling */
+.hero-content {
+  max-width: 800px;
+  padding: 80px 20px; /* Increased padding to avoid overlap with larger logo */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #ff4e50;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff4e50;
+  color: #fff;
+}
+
+/* About Section Styles */
+.about {
+  width: 100%;
+  padding: 50px 20px;
+  background: #fff;
+  color: #333;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+}
+
+.about .cta-button {
+  background-color: #ff4e50;
+  color: #fff;
+}
+
+/* Footer styles */
+.footer {
+  background: #1e3c72;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsive Design */
+
+/* For tablets and small desktops */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-content {
+    padding: 60px 10px;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-content {
+    padding: 40px 10px;
+  }
+
+  .about h2 {
+    font-size: 1.25rem;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+  }
+}

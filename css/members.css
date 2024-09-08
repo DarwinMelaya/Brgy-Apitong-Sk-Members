@@ -1,0 +1,244 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(135deg, #f9f871, #f0f0f0); /* Updated gradient */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navigation bar styles */
+.navbar {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #f9d423,
+    #ff4e50
+  ); /* Yellow to red gradient */
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+}
+
+.text-container {
+  text-align: left;
+}
+
+.text-container h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.text-container h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 5px;
+  color: #fff;
+}
+
+/* Leadership section styles */
+.leadership {
+  padding: 50px 20px;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #f9d423,
+    #ff4e50
+  ); /* Yellow to red gradient */
+  text-align: center;
+}
+
+.leadership-card {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f9f871
+  ); /* White to yellow gradient */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer; /* Cursor change on hover */
+}
+
+/* Zoom and animation effect */
+.leadership-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Hover effect for images */
+.leadership-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 4px solid #ff4e50;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.leadership-card img:hover {
+  transform: scale(1.1); /* Zoom effect for images */
+}
+
+.leadership-card h2 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #ff4e50;
+}
+
+.leadership-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.8rem;
+  color: #ff4e50;
+}
+
+.leadership-card p {
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+}
+
+/* Specific styles for the SK Chairman */
+.leadership-card.chairperson {
+  max-width: 350px; /* Larger size for Chairman */
+}
+
+/* Specific styles for Secretary and Treasurer */
+.leadership-details .leadership-card {
+  max-width: 250px; /* Slightly smaller size for Secretary and Treasurer */
+}
+
+.leadership-details {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* SK Kagawad section styles */
+.kagawad {
+  padding: 40px 20px;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #f9d423,
+    #ff4e50
+  ); /* Yellow to red gradient */
+  text-align: center;
+}
+
+.kagawad h2 {
+  margin-bottom: 20px;
+  color: #ff4e50;
+}
+
+.kagawad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.kagawad-card {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f9f871
+  ); /* White to yellow gradient */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Cursor change on hover */
+}
+
+/* Zoom and animation effect */
+.kagawad-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Hover effect for images */
+.kagawad-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ff4e50;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.kagawad-card img:hover {
+  transform: scale(1.1); /* Zoom effect for images */
+}
+
+.kagawad-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ff4e50;
+}
+
+/* Footer styles */
+.footer {
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
